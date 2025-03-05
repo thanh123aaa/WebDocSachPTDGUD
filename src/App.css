@@ -166,3 +166,246 @@ marquee {
   width: 100%;
   height: auto;
 }
+.swiper-container {
+  position: relative;
+  padding: 20px 50px;
+  /* Để chừa khoảng trống cho mũi tên */
+}
+
+.swiper-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-button-prev {
+  left: -60px;
+  /* Đẩy nút trái ra ngoài */
+}
+
+.swiper-button-next {
+  right: 15px;
+  /* Đẩy nút phải ra ngoài */
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 20px;
+}
+.book-card {
+  position: relative;
+  width: 275px;
+  text-align: center;
+ padding: 20px;
+}
+
+.book-image {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.book-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.ribbon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: red;
+  color: white;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  border-bottom-right-radius: 8px;
+}
+
+.book-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.book-card:hover .book-overlay {
+  opacity: 1;
+}
+
+.book-title {
+  background: black;
+  color: white;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+/* Footer chung */
+.footer {
+  background-color: #000;
+  color: white;
+  padding: 30px 0;
+}
+
+/* Container chính của footer */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Các cột trong footer */
+.footer-column {
+  flex: 1;
+}
+
+/* Tiêu đề của mỗi cột */
+.footer-column h3 {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.h31{
+  margin-left: 27px;
+}
+
+/* Căn chỉnh danh sách ul */
+.footer-column ul {
+  list-style: none;
+  padding-left: 0;
+  /* Loại bỏ padding mặc định */
+  margin-left: 95px;
+  /* Loại bỏ khoảng cách bên trái */
+  width: 100%;
+  /* Đảm bảo danh sách chiếm toàn bộ chiều rộng cột */
+}
+
+/* Căn chỉnh từng mục li */
+.footer-column ul li {
+  margin-bottom: 8px;
+  text-align: left;
+  /* Căn trái hoàn toàn */
+  padding-left: 0;
+  /* Loại bỏ padding dư thừa */
+  display: flex;
+  align-items: center;
+  /* Giữ nội dung li thẳng hàng */
+}
+
+/* Liên kết */
+.footer-column ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  display: inline-block;
+  /* Giữ kích thước tự nhiên, không bị dàn trải */
+  width: 100%;
+  /* Đảm bảo căn thẳng hàng */
+}
+
+.footer-column ul li a:hover {
+  color: #ff6600;
+}
+
+/* Biểu tượng thanh toán */
+.payment-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.payment-icons img {
+  width: 50px;
+}
+
+/* Phần bản quyền */
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+/* Icon mạng xã hội */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ff6600;
+}
+.payment-icons img {
+  width: 260px;
+  /* Tăng kích thước chiều rộng */
+  height: auto;
+  /* Đảm bảo tỷ lệ ảnh không bị méo */
+  margin-left: 100px;
+  /* Thêm khoảng cách giữa các ảnh */
+}
+body {
+  padding-top: 80px;
+  /* Điều chỉnh dựa theo chiều cao của header */
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.submit-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
