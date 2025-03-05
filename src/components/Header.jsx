@@ -1,15 +1,15 @@
 import { Container, Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { FaUserCircle, FaSignInAlt, FaUserPlus } from "react-icons/fa"; // Import icon
+import { FaSignInAlt, FaUserPlus } from "react-icons/fa"; // Import icon
 
 function Header() {
   return (
-    <Navbar style={{ backgroundColor: "#000" }} expand="lg">
+    <Navbar style={{ backgroundColor: "#000" }} expand="lg" fixed="top"> {/* Thêm fixed="top" */}
       <Container>
         {/* Logo */}
         <Navbar.Brand as={Link} to="/" className="header-logo">
           <img
-            src="../img/Logo/lg111.jpg"
+            src="../img/lg111.jpg"
             alt="Logo"
             className="navbar-brand img-fluid"
             style={{
