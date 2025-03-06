@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Carousel, Button } from "react-bootstrap";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
+import { useNavigate } from "react-router-dom"; // ✅ Gọi useNavigate đúng chỗ
 import "swiper/css";
 import "swiper/css/navigation";
 import banner1 from "../img/bn2.png";
@@ -11,7 +12,10 @@ import banner4 from "../img/LG6.png";
 import banner5 from "../img/bn1.png";
 import "../App.css";
 
-const products = [
+ 
+
+
+export const products = [
   { id: 1, title: "Cuộc sống trà xanh của Thái tử điện hạ", image: "/img/SP1.png", category: "Mới Nhất", price: "250.000đ", discount: 10 },
   { id: 2, title: "Khám phá bí ẩn 12 cung hoàng đạo 2025", image: "/img/sp2.jpg", category: "Mới Nhất", price: "300.000đ", discount: 10 },
   { id: 3, title: "Yêu tinh trong lòng anh", image: "/img/sp4.png", category: "Mới Nhất", price: "400.000đ", discount: 15 },
@@ -44,6 +48,7 @@ const categories = [
 ];
 
 function Home() {
+  const navigate = useNavigate();
   return (
     <Container className="mt-4 custom-container">
       <marquee>
@@ -100,7 +105,9 @@ function Home() {
                         <div className="book-overlay">
                           <h4>{product.title}</h4>
                           <p className="book-price">{product.price}</p>
-                          <Button variant="light">Xem Chi Tiết</Button>
+                          <Button variant="light" onClick={() => navigate(`/book/${product.id}`)}>
+                            Xem Chi Tiết
+                          </Button>
                         </div>
                       </div>
 

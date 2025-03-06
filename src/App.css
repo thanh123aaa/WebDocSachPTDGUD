@@ -409,3 +409,31 @@ body {
 .submit-button:hover {
   background-color: #0056b3;
 }
+
+
+
+.nav-item-custom {
+  color: white !important;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+
+.nav-item-custom:hover {
+  background-color: rgba(169, 202, 24, 0.332);
+  color: white !important;
+}
+
+.active-nav {
+  background-color: #ffb703 !important; /* Màu vàng */
+  color: black !important;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.active-nav:hover {
+  background-color: #e0a800 !important; /* Màu vàng đậm hơn khi hover */
+  color: black !important;
+}
