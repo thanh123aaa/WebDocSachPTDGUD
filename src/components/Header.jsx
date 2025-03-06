@@ -1,10 +1,15 @@
 import { Container, Navbar, Nav } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FaSignInAlt, FaUserPlus } from "react-icons/fa"; // Import icon
 
 function Header() {
+  const location = useLocation(); // Lấy URL hiện tại
+
+  // Hàm kiểm tra xem trang nào đang active
+  const isActive = (path) => (location.pathname === path ? "active-nav" : "");
+
   return (
-    <Navbar style={{ backgroundColor: "#000" }} expand="lg" fixed="top"> {/* Thêm fixed="top" */}
+    <Navbar style={{ backgroundColor: "#000" }} expand="lg" fixed="top">
       <Container>
         {/* Logo */}
         <Navbar.Brand as={Link} to="/" className="header-logo">
@@ -26,17 +31,23 @@ function Header() {
         <Navbar.Collapse id="basic-navbar-nav">
           {/* Navbar Links */}
           <Nav className="me-auto">
-            <Nav.Link as={Link} to="/" className="nav-item-custom">Trang Chủ</Nav.Link>
-            <Nav.Link as={Link} to="/contact" className="nav-item-custom">Liên Hệ</Nav.Link>
-            <Nav.Link as={Link} to="/about" className="nav-item-custom">Về Chúng Tôi</Nav.Link>
+            <Nav.Link as={Link} to="/" className={`nav-item-custom ${isActive("/")}`}>
+              Trang Chủ
+            </Nav.Link>
+            <Nav.Link as={Link} to="/contact" className={`nav-item-custom ${isActive("/contact")}`}>
+              Liên Hệ
+            </Nav.Link>
+            <Nav.Link as={Link} to="/about" className={`nav-item-custom ${isActive("/about")}`}>
+              Về Chúng Tôi
+            </Nav.Link>
           </Nav>
 
           {/* User Login Section */}
           <Nav>
-            <Nav.Link as={Link} to="/login" className="nav-item-custom">
+            <Nav.Link as={Link} to="/login" className={`nav-item-custom ${isActive("/login")}`}>
               <FaSignInAlt className="nav-icon" /> Đăng nhập
             </Nav.Link>
-            <Nav.Link as={Link} to="/register" className="nav-item-custom">
+            <Nav.Link as={Link} to="/register" className={`nav-item-custom ${isActive("/register")}`}>
               <FaUserPlus className="nav-icon" /> Đăng ký
             </Nav.Link>
           </Nav>
