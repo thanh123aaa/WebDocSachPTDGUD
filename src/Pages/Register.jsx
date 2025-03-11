@@ -30,7 +30,7 @@ function Register() {
   }
 
   function tranferPage_Facebook(){
-    alert(`Chuyển Trang Thành Công Nguyễn Ngọc Thành`);
+    alert(`Chuyển Trang Thành Công Pham Ngọc Thành`);
     navigate("/");
   }
   // Mở modal khi nhấn nút mạng xã hội
@@ -135,7 +135,7 @@ function Register() {
             <ul className="text-start">
             <li className="">
                 <img src={person_facebook} alt="Ảnh đại diện" className="avatar-img me-2" />
-                <span className="text-nowrap">Nguyễn Ngọc Thành</span>
+                <span className="text-nowrap">Phạm Ngọc Thành</span>
             </li>
             </ul>
             <Button className="w-100 btn-primary mb-2" onClick={()=>{tranferPage_Facebook();}}>Tiếp tục với {modalType}</Button>

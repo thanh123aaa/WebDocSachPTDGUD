@@ -437,3 +437,14 @@ body {
   background-color: #e0a800 !important; /* Màu vàng đậm hơn khi hover */
   color: black !important;
 }
+/* Ẩn spinner trên Chrome, Safari, Edge */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Ẩn spinner trên Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
